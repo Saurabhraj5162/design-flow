@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+.home-page {
+  padding: 20px;
+}
+
+.diagram-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.diagram-canvas {
+  width: 70%;
+  height: 600px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.component-library {
+  width: 25%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #eaeaea;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
