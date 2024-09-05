@@ -1,0 +1,62 @@
+/* src/app/pages/TopicsOverview.css */
+
+.topics-overview {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .topics-overview h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .topics-overview p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  /* Grid layout for topics */
+  .topics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .topic-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .topic-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .topic-item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .topic-item p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .learn-more-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .learn-more-link:hover {
+    text-decoration: underline;
+  }
+  

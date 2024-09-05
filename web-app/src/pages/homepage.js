@@ -41,18 +41,27 @@ const HomePage = () => {
       {/* How It Works */}
       <section className="how-it-works">
         <h2>How It Works</h2>
-        <div className="steps">
-          <div className="step">
-            <h3>1. Choose a Topic</h3>
-            <p>Select from a wide range of system design principles to explore and learn.</p>
+        <div className="steps-vertical">
+          <div className="step-box">
+            <div className="step-icon">1</div>
+            <div className="step-content">
+              <h3>Choose a Topic</h3>
+              <p>Select from a wide range of system design principles to explore and learn.</p>
+            </div>
           </div>
-          <div className="step">
-            <h3>2. Learn and Understand</h3>
-            <p>Read through detailed explanations, diagrams, and case studies.</p>
+          <div className="step-box">
+            <div className="step-icon">2</div>
+            <div className="step-content">
+              <h3>Learn and Understand</h3>
+              <p>Read through detailed explanations, diagrams, and case studies.</p>
+            </div>
           </div>
-          <div className="step">
-            <h3>3. Test Your Knowledge</h3>
-            <p>Take quizzes and apply your knowledge through interactive assessments.</p>
+          <div className="step-box">
+            <div className="step-icon">3</div>
+            <div className="step-content">
+              <h3>Test Your Knowledge</h3>
+              <p>Take quizzes and apply your knowledge through interactive assessments.</p>
+            </div>
           </div>
         </div>
       </section>
