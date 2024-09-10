@@ -1,80 +1,57 @@
+// src/app/pages/TopicPage.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './topic_page.css';
 
-// Detailed information for each topic
+// Dynamic content for each topic (this can be extended or moved to a database)
 const topicData = {
   databases: {
-    name: 'Databases',
-    description: 'Databases are used to store, retrieve, and manage data in a structured format.',
-    details: `
-      A database is an organized collection of structured information, or data, typically stored electronically in a computer system.
-      Different types of databases include relational databases (like MySQL and PostgreSQL), NoSQL databases (like MongoDB), and distributed databases.
-      Understanding ACID properties, CAP theorem, and database replication strategies is crucial for system design.
+    title: 'The Complete Guide to Databases',
+    author: 'John Doe',
+    date: 'January 5, 2024',
+    intro: `
+      Databases are the core of most software systems, providing structured storage and retrieval for data. This guide explores different types of databases, 
+      their architectures, and how to choose the right one for your needs.
     `,
-    keyConcepts: [
-      'Relational vs NoSQL Databases',
-      'ACID Properties',
-      'CAP Theorem',
-      'Database Replication',
+    sections: [
+      {
+        heading: 'What is a Database?',
+        content: `
+          A database is a structured collection of data that allows for efficient storage, retrieval, and management. 
+          Databases are essential for modern applications, including web platforms, mobile apps, and enterprise systems.
+        `,
+      },
+      {
+        heading: 'Types of Databases',
+        content: `
+          There are several types of databases, each with its own strengths and use cases:
+          - **Relational Databases** (e.g., MySQL, PostgreSQL): Store data in tables with predefined schemas.
+          - **NoSQL Databases** (e.g., MongoDB, Cassandra): Provide flexibility for unstructured data.
+          - **Distributed Databases** (e.g., Google Spanner): Scale horizontally across multiple nodes.
+        `,
+      },
+      {
+        heading: 'Key Concepts in Databases',
+        content: `
+          It's important to understand key database concepts such as:
+          - **ACID Transactions**: Ensure consistency and reliability in data transactions.
+          - **CAP Theorem**: Explains the trade-offs between consistency, availability, and partition tolerance in distributed systems.
+          - **Sharding**: A technique for scaling databases horizontally by distributing data across multiple servers.
+        `,
+      },
     ],
+    externalLinks: {
+      blogs: [
+        { name: 'Martin Fowler’s Introduction to NoSQL', url: 'https://martinfowler.com/articles/nosql-intro.html' },
+        { name: 'PostgreSQL vs MySQL', url: 'https://www.digitalocean.com/community/tutorials/postgresql-vs-mysql' },
+      ],
+      videos: [
+        { name: 'What is NoSQL?', url: 'https://www.youtube.com/watch?v=qI_g07C_Q5I' },
+        { name: 'Understanding CAP Theorem', url: 'https://www.youtube.com/watch?v=k-Yaq8AHlFA' },
+      ],
+    },
   },
-  'load-balancers': {
-    name: 'Load Balancers',
-    description: 'Load balancers distribute incoming network traffic across multiple servers to ensure high availability.',
-    details: `
-      A load balancer sits between the client and the backend servers, distributing client requests across all available servers to avoid overloading any single server.
-      Load balancing strategies include round-robin, least connections, and IP hash. Load balancers also help with fault tolerance by rerouting traffic from failed servers to healthy ones.
-    `,
-    keyConcepts: [
-      'Round-Robin Load Balancing',
-      'Least Connections Load Balancing',
-      'Health Checks',
-      'Sticky Sessions',
-    ],
-  },
-  'api-gateways': {
-    name: 'API Gateways',
-    description: 'API Gateways manage API requests and act as a reverse proxy to distribute them to backend services.',
-    details: `
-      API Gateways serve as a single entry point for API requests, performing tasks like request routing, security enforcement, and rate limiting.
-      API gateways are especially useful in microservice architectures, where they simplify communication between clients and services.
-    `,
-    keyConcepts: [
-      'API Management',
-      'Microservices Architecture',
-      'Rate Limiting',
-      'Request Routing',
-    ],
-  },
-  caching: {
-    name: 'Caching',
-    description: 'Caching is a technique to store frequently accessed data in memory to reduce latency and load on the backend.',
-    details: `
-      Caching helps to reduce load on the database or backend service by storing frequently requested data in memory (like Redis or Memcached).
-      Cache invalidation strategies are important to ensure data freshness while maximizing performance.
-    `,
-    keyConcepts: [
-      'In-Memory Caching',
-      'Cache Invalidation',
-      'Distributed Caching',
-      'Write-Through Cache',
-    ],
-  },
-  sharding: {
-    name: 'Sharding',
-    description: 'Sharding is a technique to split data across multiple databases to improve scalability and performance.',
-    details: `
-      Sharding distributes data across different database nodes, allowing horizontal scaling as the data grows. Each shard is an independent database that contains a portion of the total dataset.
-      Sharding strategies include range-based sharding, hash-based sharding, and geolocation-based sharding.
-    `,
-    keyConcepts: [
-      'Range-Based Sharding',
-      'Hash-Based Sharding',
-      'Geolocation Sharding',
-      'Shard Key Design',
-    ],
-  },
+  // Add more topics here...
 };
 
 const TopicPage = () => {
@@ -87,17 +64,29 @@ const TopicPage = () => {
 
   return (
     <div className="topic-page">
-      <h1>{topic.name}</h1>
-      <p>{topic.description}</p>
-      <div className="topic-details">
-        <h2>Details</h2>
-        <p>{topic.details}</p>
-      </div>
-      <div className="key-concepts">
-        <h2>Key Concepts</h2>
+      <h1>{topic.title}</h1>
+      <p className="topic-meta">By {topic.author} | {topic.date}</p>
+      <p className="topic-intro">{topic.intro}</p>
+
+      {topic.sections.map((section, index) => (
+        <div key={index} className="topic-section">
+          <h2>{section.heading}</h2>
+          <p>{section.content}</p>
+        </div>
+      ))}
+
+      <div className="external-links">
+        <h2>Further Reading</h2>
+        <h3>Blogs</h3>
         <ul>
-          {topic.keyConcepts.map((concept, index) => (
-            <li key={index}>{concept}</li>
+          {topic.externalLinks.blogs.map((blog, index) => (
+            <li key={index}><a href={blog.url} target="_blank" rel="noopener noreferrer">{blog.name}</a></li>
+          ))}
+        </ul>
+        <h3>Videos</h3>
+        <ul>
+          {topic.externalLinks.videos.map((video, index) => (
+            <li key={index}><a href={video.url} target="_blank" rel="noopener noreferrer">{video.name}</a></li>
           ))}
         </ul>
       </div>

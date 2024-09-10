@@ -1,0 +1,15 @@
+.component-library {
+    width: 200px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .component {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    cursor: grab;
+    text-align: center;
+  }
+  

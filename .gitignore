@@ -5,7 +5,7 @@ venv/
 .env
 
 # Frontend
-
+web-app\node_modules
 
 # IDEs
 .vscode/
