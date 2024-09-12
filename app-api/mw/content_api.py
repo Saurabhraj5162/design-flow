@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify, request
 from pymongo import MongoClient
-from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
 import os
 # Load environment variables from .env file

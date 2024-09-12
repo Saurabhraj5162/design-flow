@@ -1,9 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/homepage';
-import TopicsOverview from './pages/topics_overview';
-import TopicPage from './pages/topic_page';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/homepage";
+import TopicsOverview from "./pages/topics_overview";
+import TopicBlogsPage from "./pages/topic_blog_page";
+import BlogWritingPage from "./pages/blog_writing_page";
+import "./App.css";
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
           {/* Topics Overview Page */}
           <Route path="/topics" element={<TopicsOverview />} />
 
-          {/* Individual Topic Page (using slug to dynamically render the correct topic) */}
-          <Route path="/topics/:slug" element={<TopicPage />} />
+          {/* Topic Blogs Page */}
+          <Route path="/topics/:slug" element={<TopicBlogsPage />} />
+
+          {/* Blog Writing Page */}
+          <Route path="/topics/:slug/write" element={<BlogWritingPage />} />
         </Routes>
       </div>
     </Router>
