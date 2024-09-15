@@ -45,43 +45,56 @@ def create_blog():
     return jsonify({"message": "Blog created", "id": str(result.inserted_id)}), 201
 
 
+# @blog_api.route('/api/blog/<title>', methods=['GET'])
+# def get_blog(title):
+#     # Find the blog in MongoDB by title
+#     blog = collection.find_one({"title": title})
+    
+#     if blog:
+#         blog['_id'] = str(blog['_id'])  # Convert ObjectId to string for JSON serialization
+#         return jsonify(blog), 200
+#     else:
+#         return jsonify({"error": "Blog not found"}), 404
+
+
 @blog_api.route('/api/blog/<title>', methods=['GET'])
-def get_blog(title):
-    # Find the blog in MongoDB by title
+def get_blogs_by_topic(title):
+    # Find a blog in MongoDB by title
     blog = collection.find_one({"title": title})
     
     if blog:
-        blog['_id'] = str(blog['_id'])  # Convert ObjectId to string for JSON serialization
+        # Convert ObjectId to string for JSON serialization
+        blog['_id'] = str(blog['_id'])
         return jsonify(blog), 200
     else:
         return jsonify({"error": "Blog not found"}), 404
 
 
-@blog_api.route('/api/blog/<title>', methods=['PUT'])
-def update_blog(title):
-    data = request.json
-    # Update blog content based on the title
-    updated_blog = {
-        "$set": {
-            'intro': data.get('intro'),
-            'sections': data.get('sections'),
-            'externalLinks': data.get('externalLinks')
-        }
-    }
+# @blog_api.route('/api/blog/<title>', methods=['PUT'])
+# def update_blog(title):
+#     data = request.json
+#     # Update blog content based on the title
+#     updated_blog = {
+#         "$set": {
+#             'intro': data.get('intro'),
+#             'sections': data.get('sections'),
+#             'externalLinks': data.get('externalLinks')
+#         }
+#     }
     
-    result = collection.update_one({"title": title}, updated_blog)
+#     result = collection.update_one({"title": title}, updated_blog)
     
-    if result.matched_count:
-        return jsonify({"message": "Blog updated"}), 200
-    else:
-        return jsonify({"error": "Blog not found"}), 404
+#     if result.matched_count:
+#         return jsonify({"message": "Blog updated"}), 200
+#     else:
+#         return jsonify({"error": "Blog not found"}), 404
 
 
-@blog_api.route('/api/blog/<title>', methods=['DELETE'])
-def delete_blog(title):
-    result = collection.delete_one({"title": title})
+# @blog_api.route('/api/blog/<title>', methods=['DELETE'])
+# def delete_blog(title):
+#     result = collection.delete_one({"title": title})
     
-    if result.deleted_count:
-        return jsonify({"message": "Blog deleted"}), 200
-    else:
-        return jsonify({"error": "Blog not found"}), 404
+#     if result.deleted_count:
+#         return jsonify({"message": "Blog deleted"}), 200
+#     else:
+#         return jsonify({"error": "Blog not found"}), 404
