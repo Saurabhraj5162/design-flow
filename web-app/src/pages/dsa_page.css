@@ -1,0 +1,68 @@
+.dsa-questions-page {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .dsa-questions-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+  }
+  
+  .dsa-questions-page p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Section for each topic (Array, Binary, etc.) */
+  .dsa-section {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .dsa-section h2 {
+    font-size: 1.8rem;
+    color: #3498db;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .dsa-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dsa-section li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .dsa-section li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dsa-section li a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .dsa-section li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .dsa-questions-page {
+      padding: 20px;
+    }
+  }
+  

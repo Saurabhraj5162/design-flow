@@ -47,6 +47,11 @@ const HomePage = () => {
             <p>Master the concepts of Data Engineering - Data Loading, Pipeline, etc.</p>
             <Link to="/categories/data-engineering">Explore</Link>
           </div>
+          <div className="category-card">
+            <h3>DSA</h3>
+            <p>Get the list of Leetcode questions for Data Structures & Algorithms.</p>
+            <Link to="/categories/dsa">Explore</Link>
+          </div>
         </div>
       </section>
 
