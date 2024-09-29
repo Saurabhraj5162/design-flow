@@ -7,8 +7,8 @@ import DSAPage from "./pages/dsa_page"
 import RecurrentNeuralNetworksPage from "./pages/rnn_page"
 import TransformerPage from "./pages/transformer_page"
 import MLDSConceptsPage from "./pages/ml_ds_concepts_page";
-import TopicBlogsPage from "./pages/topic_blog_page";
-import BlogWritingPage from "./pages/blog_writing_page";
+import FoundationalMaths from "./pages/ml-ds-concepts/foundational_maths";
+import StatisticsProbability from "./pages/ml-ds-concepts/statistics_probability";
 import "./App.css";
 
 function App() {
@@ -23,6 +23,8 @@ function App() {
           <Route path="/categories/sequence-analysis/rnns" element={<RecurrentNeuralNetworksPage />} />
           <Route path="/categories/sequence-analysis/transformers" element={<TransformerPage />} />
           <Route path="/categories/ml-ds-concepts" element={<MLDSConceptsPage />} />
+          <Route path="/categories/ml-ds-concepts/foundational-maths" element={<FoundationalMaths />} />
+          <Route path="/categories/foundational-maths/statistics-probability" element={<StatisticsProbability />} />
         </Routes>
       </div>
     </Router>
