@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MathJax, MathJaxContext } from 'better-react-mathjax';
-import './statistics_probability.css';
+import './ml_ds_concept_pages.css';
 
 const StatisticsProbability = () => {
     return (
@@ -484,7 +484,7 @@ const StatisticsProbability = () => {
           {/* Next Steps */}
           <section className="next-steps">
             <p>Ready to continue your learning journey?</p>
-            <Link to="/foundational-concepts/linear-algebra" className="next-button">
+            <Link to="/categories/foundational-maths/linear-algebra" className="next-button">
               Proceed to Linear Algebra
             </Link>
           </section>
