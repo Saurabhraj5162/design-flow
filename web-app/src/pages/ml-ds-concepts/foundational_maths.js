@@ -12,6 +12,7 @@ const FoundationalMaths = () => {
     
           <section className="content-section">
             <div className="card">
+            <div className="card-number">1</div>
               <h2>Statistics & Probability</h2>
               <p>
                 Dive into the fundamentals of data analysis, including probability distributions,
@@ -23,6 +24,7 @@ const FoundationalMaths = () => {
             </div>
     
             <div className="card">
+            <div className="card-number">2</div>
               <h2>Linear Algebra</h2>
               <p>
                 Learn about vectors, matrices, and operations that are essential for understanding ML
@@ -34,6 +36,7 @@ const FoundationalMaths = () => {
             </div>
     
             <div className="card">
+            <div className="card-number">3</div>
               <h2>Calculus for ML</h2>
               <p>
                 Understand differentiation and integration concepts that power optimization techniques
@@ -45,6 +48,7 @@ const FoundationalMaths = () => {
             </div>
     
             <div className="card">
+            <div className="card-number">4</div>
               <h2>Probability Distributions</h2>
               <p>
                 Explore different types of distributions like Normal, Binomial, and Poisson, which are

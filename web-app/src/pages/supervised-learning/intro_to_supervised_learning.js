@@ -6,7 +6,7 @@ import './supervised_learning.css'; // Reusing the CSS you provided
 const IntroductionToSupervisedLearning = () => {
   return (
     <MathJaxContext>
-      <div className="linear-algebra-container">
+      <div className="container">
         <header className="header">
           <h1>Introduction to Supervised Learning</h1>
           <p>Understanding the Basics of Predictive Modeling with Labeled Data</p>
@@ -24,19 +24,7 @@ const IntroductionToSupervisedLearning = () => {
             </p>
           </section>
 
-          {/* Types of Supervised Learning */}
-          <section>
-            <h2>Types of Supervised Learning</h2>
-            <p>Supervised learning can be broadly categorized into two types:</p>
-            <ul>
-              <li>
-                <strong>Regression:</strong> Predicting continuous numerical values.
-              </li>
-              <li>
-                <strong>Classification:</strong> Predicting discrete categories or class labels.
-              </li>
-            </ul>
-          </section>
+          
           {/* Types of Supervised Learning */}
           <section>
             <h2>Types of Supervised Learning</h2>

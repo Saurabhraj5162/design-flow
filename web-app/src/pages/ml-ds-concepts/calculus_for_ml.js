@@ -227,7 +227,7 @@ const CalculusForML = () => {
           {/* Conclusion */}
           <section className="next-steps">
             <p>Well done! You've covered the basics of calculus for machine learning.</p>
-            <Link to="/foundational-concepts/probability-distributions" className="next-button">
+            <Link to="/categories/foundational-maths/probability-distributions" className="next-button">
               Proceed to Probability Distributions
             </Link>
           </section>
