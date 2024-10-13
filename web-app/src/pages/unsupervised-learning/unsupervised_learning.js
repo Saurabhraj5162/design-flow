@@ -66,16 +66,7 @@ const UnsupervisedLearning = () => {
           </Link>
         </div>
 
-        <div className="card">
-          <div className="card-number">6</div>
-          <h2>Principal Component Analysis (PCA)</h2>
-          <p>
-            Understand PCA, a method for reducing dimensionality by transforming features.
-          </p>
-          <Link to="/categories/unsupervised-learning/principal-component-analysis" className="start-reading-button">
-            Start Reading
-          </Link>
-        </div>
+
 
         <div className="card">
           <div className="card-number">7</div>

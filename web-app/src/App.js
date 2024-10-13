@@ -32,6 +32,14 @@ import DimensionalityReduction from "./pages/dimensionality-reduction/dimensiona
 import TimeSeriesAnalysis from "./pages/time-series-analysis/time_series_analysis";
 import ModelDeployment from "./pages/model-deployment/model_deploy";
 import EthicsAndInterpretability from "./pages/ethics/ethics_interpretibility";
+import IntroductionToUnsupervisedLearning from "./pages/unsupervised-learning/intro_to_unsupervised";
+import Clustering from "./pages/unsupervised-learning/clustering";
+import KMeansClustering from "./pages/unsupervised-learning/k_means";
+import HierarchicalClustering from "./pages/unsupervised-learning/hierarchical_clustering";
+import DimensionalityReductionOverview from "./pages/unsupervised-learning/dimensionality_reduction_overview";
+import AssociationRuleLearning from "./pages/unsupervised-learning/association_rule_learn";
+import AnomalyDetection from "./pages/unsupervised-learning/anomaly_detection";
+import SelfOrganizingMaps from "./pages/unsupervised-learning/self_organising_map";
 import "./App.css";
 
 function App() {
@@ -71,8 +79,14 @@ function App() {
           <Route path="/categories/ml-ds-concepts/time-series" element={<TimeSeriesAnalysis />} />
           <Route path="/categories/ml-ds-concepts/model-deployment" element={<ModelDeployment />} />
           <Route path="/categories/ml-ds-concepts/ethics-interpretability" element={<EthicsAndInterpretability />} />
-
-
+          <Route path="/categories/unsupervised-learning/introduction" element={<IntroductionToUnsupervisedLearning />} />
+          <Route path="/categories/unsupervised-learning/clustering" element={<Clustering />} />
+          <Route path="/categories/unsupervised-learning/k-means-clustering" element={<KMeansClustering />} />
+          <Route path="/categories/unsupervised-learning/hierarchical-clustering" element={<HierarchicalClustering />} />
+          <Route path="/categories/unsupervised-learning/dimensionality-reduction" element={<DimensionalityReductionOverview />} />
+          <Route path="/categories/unsupervised-learning/association-rule-learning" element={<AssociationRuleLearning />} />
+          <Route path="/categories/unsupervised-learning/anomaly-detection" element={<AnomalyDetection />} />
+          <Route path="/categories/unsupervised-learning/self-organizing-maps" element={<SelfOrganizingMaps />} />
           </Routes>
       </div>
     </Router>
