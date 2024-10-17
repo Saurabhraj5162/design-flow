@@ -260,15 +260,7 @@ plt.show()
           </section>
 
           {/* Conclusion */}
-          <section className="next-steps">
-            <p>
-              Self-Organizing Maps provide a powerful tool for visualizing and understanding high-dimensional data. By preserving topological relationships, SOMs enable meaningful interpretations and can aid in tasks like clustering and pattern recognition.
-            </p>
-            <p>Next, let's explore reinforcement learning and how agents learn to make decisions.</p>
-            <Link to="/categories/reinforcement-learning/introduction" className="next-button">
-              Proceed to Reinforcement Learning
-            </Link>
-          </section>
+        
         </div>
       </div>
     </MathJaxContext>

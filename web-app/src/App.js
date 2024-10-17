@@ -40,6 +40,15 @@ import DimensionalityReductionOverview from "./pages/unsupervised-learning/dimen
 import AssociationRuleLearning from "./pages/unsupervised-learning/association_rule_learn";
 import AnomalyDetection from "./pages/unsupervised-learning/anomaly_detection";
 import SelfOrganizingMaps from "./pages/unsupervised-learning/self_organising_map";
+import IntroductionToModelEvaluation from "./pages/model-eval/intro_to_model_eval";
+import TrainingValidationTestSets from "./pages/model-eval/data_splitting";
+import CrossValidationTechniques from "./pages/model-eval/cross_valid";
+import ClassificationMetrics from "./pages/model-eval/classification_metrics";
+import RegressionMetrics from "./pages/model-eval/regression_metrics";
+import ROCCurveAndAUC from "./pages/model-eval/roc_auc";
+import ConfusionMatrix from "./pages/model-eval/confusion_matrix";
+import ModelSelectionAndHyperparameterTuning from "./pages/model-eval/model_selection";
+import BiasVarianceTradeoff from "./pages/model-eval/bias_variance";
 import "./App.css";
 
 function App() {
@@ -87,6 +96,16 @@ function App() {
           <Route path="/categories/unsupervised-learning/association-rule-learning" element={<AssociationRuleLearning />} />
           <Route path="/categories/unsupervised-learning/anomaly-detection" element={<AnomalyDetection />} />
           <Route path="/categories/unsupervised-learning/self-organizing-maps" element={<SelfOrganizingMaps />} />
+          <Route path="/categories/model-evaluation/introduction" element={<IntroductionToModelEvaluation />} />
+          <Route path="/categories/model-evaluation/data-splitting" element={<TrainingValidationTestSets />} />
+          <Route path="/categories/model-evaluation/cross-validation" element={<CrossValidationTechniques />} />
+          <Route path="/categories/model-evaluation/classification-metrics" element={<ClassificationMetrics />} />
+          <Route path="/categories/model-evaluation/regression-metrics" element={<RegressionMetrics />} />
+          <Route path="/categories/model-evaluation/roc-auc" element={<ROCCurveAndAUC />} />
+          <Route path="/categories/model-evaluation/confusion-matrix" element={<ConfusionMatrix />} />
+          <Route path="/categories/model-evaluation/model-selection" element={<ModelSelectionAndHyperparameterTuning />} />
+          <Route path="/categories/model-evaluation/bias-variance-tradeoff" element={<BiasVarianceTradeoff />} />
+
           </Routes>
       </div>
     </Router>
